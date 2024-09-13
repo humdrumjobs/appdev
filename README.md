@@ -13,13 +13,13 @@
 ### Jobs in area
 
 # Description of how you will use each technology
-## HTML: ### Basic formatting, screen view
-## CSS: ### Allowing to be displayed on all screen sizes especially mobile
-## Javascript: ### Rankings, reviews, login
-## React: ### Used for multiple pages, specification for the individual, if they’re looking up house maintenance, it will cater to those preferences.
-## Service: ### Showing posts or job ratings to other people on different devices
-## Data-base: ### Job types and/or categories, login data
-## Websocket-data: ### Reviews and ratings, login
+## HTML: Basic formatting, screen view
+## CSS: Allowing to be displayed on all screen sizes especially mobile
+## Javascript: Rankings, reviews, login
+## React: Used for multiple pages, specification for the individual, if they’re looking up house maintenance, it will cater to those preferences.
+## Service: Showing posts or job ratings to other people on different devices
+## Data-base: Job types and/or categories, login data
+## Websocket-data: Reviews and ratings, login
 
 
 
