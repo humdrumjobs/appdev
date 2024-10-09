@@ -9,25 +9,69 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Signup for an Account</title>
+        <title>Humdrum Jobs</title>
         <link rel="stylesheet" href="styles.css">
+        <a href=""
     </head>
-    <body>
-
-    <div class="signup-container">
-        <h2>Create an Account</h2>
-        <form action="/signup" method="POST">
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
-            <input type="submit" value="Sign Up">
-        </form>
-        <p>Already have an account? <a href="/login">Log in</a></p>
-    </div>
-    
-    </body>
-
-
-
-</html>
+        <body>
+        
+          <div id="Login">
+            <h1 id="title-track"> Humdrum<strong id="title-door">Jobs</strong> </h1>
+            <br>
+            <div style="text-align:center;">
+            <button id="submitButton" onClick = "navigate('Login', 'create-account')">Create an account.</button>
+            </div>
+            <h3 id="email-enter"> Email : 
+              <input type= "text" id="email-enter-text" name="email"> </h3>
+            <h3 id="pw"> Password : 
+              <input type= "text" id="userPw" name="pw"> </h3>
+            <div style="text-align:center;">
+              <input type="submit" id="submitButton" value="Submit" onClick="navigate('Login', 'basic-controls');">
+              <br>
+              <input type="button" id="forgotpwbutton" value ="forgot your password?" onClick="navigate('Login', 'pwretrieve');">
+            </div>
+            <p id="remember"> <input id="checkbox" type="checkbox"> Remember me. </p>
+          </div>
+          
+          
+          <div id="pwretrieve">
+            <h1 id="title-track" class="title"> Track<strong id="title-door">Door</strong> </h1>
+            <br>
+            <h3 id="email-enter"> Enter your email : 
+              <input type= "text"> </h3>
+            <div style="text-align:center;">
+              <button id="submitButton" onClick = "navigate('Login', 'basic-controls')">Submit</button> 
+              <br>
+              <button id="submitButton" onClick = "navigate('pwretrieve', 'Login')">Back </button>
+            </div>
+            <p id="email-info"> You will will receive an email momentarily containing a link.<br>Click the link to reset your password. </p>
+          </div>
+        
+        
+          <div id="create-account">
+            <h2 id="create-acct">Create an account.</u> </h2>
+            <form>
+            <p id="user-info-sm"> First name:
+              <input type="text" name="first"> </p>
+            <p id="user-info-sm">Last Name: <input type="text" name="last"> </p>
+            <p id="user-info-sm">E mail: <input type="text" name="email"> </p>
+            <p id="user-info-sm">Password: <input type="text" name="pw"> </p>
+            <p id="user-info-sm">Phone number: <input type="text" name="phone"> </p>
+            <div style="text-align:center;">
+              <button id="submitButton" onClick="createAccount(this.form);">Submit</button>
+            </div>
+           </form>
+          <br>
+          <div style="text-align:center;">
+          <button id="submitButton" onClick = "navigate('create-account', 'Login')">Back </button>
+          </div>
+        
+          
+        
+          <div id="adv-ft">
+            <button id="logout-button" class="options"  onClick = "navigate('adv-ft', 'Login')"> Logout </button>
+          </div>
+        
+        </body>
+        
+        </html>

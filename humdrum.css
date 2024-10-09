@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(82, 185, 253);
+}
+
+#title-track {
+  color: white;
+  font-family: Garamond, sans-serif;
+  font-size: 300%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#title-door {
+  color: black;
+}
+
+#Login {
+  display: block;
+}
+
+#pwretrieve {
+  display: none;  
+}
+
+#create-account {
+  display: none;
+}
+
+#basic-controls {
+  display: none;
+}
+
+#options {
+  display: inline; 
+}
+
+#adv-ft {
+  display: none; 
+}
+
+#email-enter {
+  color: black;
+  font-family: Garamond, sans-serif;
+  text-align: center;
+}
+
+#pw {
+  color: black;
+  font-family: Garamond, sans-serif;
+  text-align: center;
+}
+
+#submitButton {
+  background-color: rgb(201, 201, 203);
+  font-family: Garamond;
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+}
+#forgotpwbutton {
+  background-color: rgb(82, 185, 253);
+  font-family: Garamond;
+  color: white;
+  border: none;
+  text-align: center;
+}
+
+#remember {
+  color: black;
+  font-family: Garamond, sans-serif;
+  text-align: center;
+}
+
+#print {
+  color: black;
+  font-family: Garamond, sans-serif;
+  text-align: center;
+}
+
+#email-info {
+  color: black;
+  font-family: Garamond, sans-serif;
+  text-align: center;
+}
+
+#back-button {
+    background-color: rgb(82, 185, 253);
+    font-family: Garamond;
+    color: white;
+    border: 1px solid white; 
+    text-align: center;
+    font-size: 100%;
+}
+
+#logout-button {
+    background-color: rgb(209, 209, 203);
+  font-family: Garamond;
+  color: white;
+  border: 1px solid white;
+  font-size: 80%;
+}
+
+#door-status {
+  color: rgb(35, 50, 57);
+  font-family: Garamond, sans-serif;
+  text-align: left;
+}
+
+#door-status-active {
+  color: white;
+  font-family: Garamond, sans-serif;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+#create-acct {
+  color: black;
+  font-family: Garamond, sans-serif;
+  text-align: center;
+}
+
+#user-info-sm {
+  color: black;
+  font-family: Garamond, sans-serif;
+  text-align: center;
+}
+
+#page-title {
+  color: black;
+  font-family: Garamond, sans-serif;
+  text-align: center;
+}
+
+#button-open {
+    background-color: rgb(143, 210, 254);
+    font-family: Garamond, sans-serif;
+    font-size: 175%;
+    color: white;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    padding: 16px 16px;
+    text-align: center;
+}
+
+#button-add {
+    background-color: rgb(143, 210, 254);
+    font-family: Garamond, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+#button-closed {
+    background-color: rgb(102, 150, 182);
+    font-family: Garamond, sans-serif;
+    font-size: 175%;
+    color: white;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    padding: 16px 16px;
+    text-align: center;
+}
+
+#timer-input {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  background-color: rgb(82, 185, 253);
+  font-family: Garamond, sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 100%;
+  letter-spacing: 2px;
+}
