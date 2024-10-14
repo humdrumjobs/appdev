@@ -22,6 +22,12 @@
 ## Websocket-data: Reviews and ratings, login
 
 
+# Stuff we added for Startup HTML submission:
+### We adjusted the login and password settings
+### Adjusted the means to commit and deploy files (figured out the technical difficulties)
+### Required wesbite abilities added
+
+
 
 # Desktop Preview
 ![app preview](https://github.com/user-attachments/assets/f135dc7e-ec72-4f27-bbe9-88af2bd4bd07)
