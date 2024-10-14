@@ -21,43 +21,55 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Humdrum Jobs</title>
+        <span>
+          <title>Humdrum Jobs</title>
+          <span style="text-align:left;">Username: Hum Jones</span>
+          <span><h2 style="text-align:left;">Your job rating average: </h2> <img src="4stars.png" width="100px"></img></span>
+
+        </span>
+        
+
         <link rel="stylesheet" href="styles.css">
     </head>
         <body>
         
           <div id="Login">
             <h1 id="title-track"> Humdrum<strong id="title-door">Jobs</strong> </h1>
+            <img src="gardener.jpg" width="400px"></img>
             <br>
-            <div style="text-align:center;">
-            <button id="submitButton" onClick = "navigate('Login', 'create-account')">Create an account.</button>
-            </div>
+            <h2><strong>Sign in:</strong></h2>
             <h3 id="email-enter" text-align="justify"> Email : 
               <input type= "text" id="email-enter-text" name="email"> </h3>
             <h3 id="pw" text-align="justify"> Password : 
               <input type= "password" id="userPw" name="pw"> </h3>
             <div style="text-align:left;">
-              <input type="submit" id="submitButton" value="Submit" onClick="navigate('Login', 'basic-controls');">
+              <p id="remember"> <input id="checkbox" type="checkbox"> Remember me. </p>
+              <input type="submit" id="submitButton" value="Sign in" onClick="navigate('Login', 'basic-controls');">
               <br>
-              <input type="button" id="forgotpwbutton" value ="forgot your password?" onClick="navigate('Login', 'pwretrieve');">
+              
             </div>
-            <p id="remember"> <input id="checkbox" type="checkbox"> Remember me. </p>
+            
           </div>
           
           
           <div id="pwretrieve">
             
             <br>
+            <br>
+
+            <h3>Forgot Your Password?</h3>
+            <!-- <input type="button" id="forgotpwbutton" value ="forgot your password?" onClick="navigate('Login', 'pwretrieve');"> -->
             <h3 id="email-enter"> Enter your email : 
               <input type= "text"> </h3>
-            <div style="text-align:center;">
+            <div style="text-align:left;">
               <button id="submitButton" onClick = "navigate('Login', 'basic-controls')">Submit</button> 
               <br>
-              <button id="submitButton" onClick = "navigate('pwretrieve', 'Login')">Back </button>
+              <!-- <button id="submitButton" onClick = "navigate('pwretrieve', 'Login')">Back </button> -->
             </div>
             <p id="email-info"> You will will receive an email momentarily containing a link.<br>Click the link to reset your password. </p>
           </div>
-        
+        <br>
+        <br>
         
           <div id="create-account">
             <h2 id="create-acct">Create an account.</u> </h2>
@@ -68,8 +80,11 @@
             <p id="user-info-sm">E mail: <input type="text" name="email"> </p>
             <p id="user-info-sm">Password: <input type="text" name="pw"> </p>
             <p id="user-info-sm">Phone number: <input type="text" name="phone"> </p>
-            <div style="text-align:center;">
-              <button id="submitButton" onClick="createAccount(this.form);">Submit</button>
+            <!-- <div style="text-align:center;">
+              <button id="submitButton" onClick = "navigate('Login', 'create-account')">Create an account.</button>
+            </div> -->
+            <div style="text-align:left;">
+              <button id="submitButton" onClick="createAccount(this.form);">Create Account</button>
             </div>
            </form>
           <br>

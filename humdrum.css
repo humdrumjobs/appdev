@@ -178,3 +178,8 @@ body {
   font-size: 100%;
   letter-spacing: 2px;
 }
+
+
+.job-listing{
+  border: 5px solid black;
+}
