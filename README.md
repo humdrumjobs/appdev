@@ -21,11 +21,19 @@
 ## Data-base: Job types and/or categories, login data
 ## Websocket-data: Reviews and ratings, login
 
+# HTML Deliverable
+### Separate pages
+### Create page with locations of jobs
+### Show workers star average
+### Show available jobs on the market
 
 # Stuff we added for Startup HTML submission:
 ### We adjusted the login and password settings
 ### Adjusted the means to commit and deploy files (figured out the technical difficulties)
 ### Required wesbite abilities added
+
+
+
 
 
 
