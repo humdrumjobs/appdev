@@ -36,7 +36,9 @@
 ### added 3rd party service call placeholder
 ### added websocket placeholder
 
-
+# CSS STARTUP
+### adjusted alignment for sections
+### adjusted colors for better viewing
 
 
 
