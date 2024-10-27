@@ -1,125 +1,72 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Humdrum Jobs</title>
+</head>
+<body>
+    <header class="main-header">
+        <nav id='nav-bar'>
+            <ul class="nav-line">  
+                <li class="nav-item"><a class='nav-link' href="index.html"><strong>Humdrum Jobs™</strong></a></li>
+                <li class="nav-item"><a class='nav-link' href="index.html"><strong>Home</strong></a></li>
+                <li class="nav-item"><a class='nav-link' href="page2.html"><strong>Job Offerings</strong></a></li>
+                <li class="nav-item"><a class='nav-link' href="page3.html"><strong>Locations</strong></a></li>
+                <li class="nav-item"><a class='nav-link' href="https://github.com/humdrumjobs/appdev"><strong>Github Repository</strong></a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- SIGN UP PAGE -->
-<header class="main-header">
-  <nav id='nav-bar'>
-      <ul class="nav-line">  
-        <span class="nav-item"><li><a class='nav-link' href="index.html"><strong>Humdrum Jobs™</strong></a></li></span>
-        <span class="nav-item"><li><a class='nav-link' href="index.html"><strong>Home</strong></a></li></span>
-        <span class="nav-item"><li><a class='nav-link' href="page2.html"><strong>Job Offerings</strong></a></li></span>
-        <span class="nav-item"><li><a class='nav-link' href="page3.html"><strong>Locations</strong></a></li></span>
-        <span class="nav-item"><li><a class='nav-link' href="https://github.com/humdrumjobs/appdev"><strong>Github Repository</strong></a></li></span>
-      </ul>
-  </nav>
-</header>
+    <div id="Login">
+        <h1 id="title-track"> Humdrum<strong id="title-door">Jobs</strong> </h1>
+        <img src="gardener.jpg" width="400" alt="Gardener Image">
+        <h2><strong>Sign in:</strong></h2>
+        <h3>Email: <input type="text" id="email-enter-text" name="email"></h3>
+        <h3>Password: <input type="password" id="userPw" name="pw"></h3>
+        <div>
+            <p id="remember"><input id="checkbox" type="checkbox"> Remember me.</p>
+            <input type="submit" id="submitButton" value="Sign in" onClick="navigate('Login', 'basic-controls');">
+        </div>
+    </div>
 
+    <div id="pwretrieve">
+        <h3>Forgot Your Password?</h3>
+        <h3>Email: <input type="text"></h3>
+        <div>
+            <button id="submitButton" onClick="navigate('Login', 'basic-controls')">Submit</button>
+        </div>
+        <p id="email-info"> You will receive an email momentarily containing a link. Click the link to reset your password.</p>
+    </div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <span>
-          <title>Humdrum Jobs</title>
-          <span style="text-align:left;">Username: Hum Jones</span>
-          <span><h2 style="text-align:left;">Your job rating average: </h2> <img src="4stars.png" width="100px"></img></span>
-          <h2> HERE IS WHERE 3rd PARTY SERVICE CALL WILL BE LOCATED (LOADS AMOUNT OF JOBS AVAILABLE IN THE US)</h2>
-
-        </span>
-        
-
-        <link rel="stylesheet" href="styles.css">
-    </head>
-        <body>
-        
-          <div id="Login">
-            <h1 id="title-track"> Humdrum<strong id="title-door">Jobs</strong> </h1>
-            <img src="gardener.jpg" width="400px"></img>
-            <br>
-            <h2><strong>Sign in:</strong></h2>
-            <h3 id="email-enter" text-align="justify"> Email : 
-              <input type= "text" id="email-enter-text" name="email"> </h3>
-            <h3 id="pw" text-align="justify"> Password : 
-              <input type= "password" id="userPw" name="pw"> </h3>
-            <div style="text-align:left;">
-              <p id="remember"> <input id="checkbox" type="checkbox"> Remember me. </p>
-              <input type="submit" id="submitButton" value="Sign in" onClick="navigate('Login', 'basic-controls');">
-              <br>
-              
-            </div>
-            
-          </div>
-          
-          
-          <div id="pwretrieve">
-            
-            <br>
-            <br>
-
-            <h3>Forgot Your Password?</h3>
-            <!-- <input type="button" id="forgotpwbutton" value ="forgot your password?" onClick="navigate('Login', 'pwretrieve');"> -->
-            <h3 id="email-enter"> Enter your email : 
-              <input type= "text"> </h3>
-            <div style="text-align:left;">
-              <button id="submitButton" onClick = "navigate('Login', 'basic-controls')">Submit</button> 
-              <br>
-              <!-- <button id="submitButton" onClick = "navigate('pwretrieve', 'Login')">Back </button> -->
-            </div>
-            <p id="email-info"> You will will receive an email momentarily containing a link.<br>Click the link to reset your password. </p>
-          </div>
-        <br>
-        <br>
-        
-          <div id="create-account">
-            <h2 id="create-acct">Create an account.</u> </h2>
-            <form>
-            <p id="user-info-sm"> First name:
-              <input type="text" name="first"> </p>
-            <p id="user-info-sm">Last Name: <input type="text" name="last"> </p>
-            <p id="user-info-sm">E mail: <input type="text" name="email"> </p>
-            <p id="user-info-sm">Password: <input type="text" name="pw"> </p>
-            <p id="user-info-sm">Phone number: <input type="text" name="phone"> </p>
-            <!-- <div style="text-align:center;">
-              <button id="submitButton" onClick = "navigate('Login', 'create-account')">Create an account.</button>
-            </div> -->
-            <div style="text-align:left;">
-              <button id="submitButton" onClick="createAccount(this.form);">Create Account</button>
-            </div>
-           </form>
-          <br>
-          <div style="text-align:center;">
-          <button id="submitButton" onClick = "navigate('create-account', 'Login')">Back </button>
-          </div>
-        
-          
-        
-          <div id="adv-ft">
-            <button id="logout-button" class="options"  onClick = "navigate('adv-ft', 'Login')"> Logout </button>
-          </div>
-        
-        </body>
-        
-        <footer>
-          <div class="wrapper">
+    <div id="create-account">
+        <h2 id="create-acct">Create an account.</h2>
+        <form>
+            <p>First name: <input type="text" name="first"></p>
+            <p>Last Name: <input type="text" name="last"></p>
+            <p>Email: <input type="text" name="email"></p>
+            <p>Password: <input type="text" name="pw"></p>
+            <p>Phone number: <input type="text" name="phone"></p>
             <div>
-                      <!-- Email Link -->
-                      <a href="mailto:youremail@example.com?subject=Questions&body=Hi, I have a question about...">
-                          Send us an Email
-                      </a>
-                      <p>
-                        Call us at: +1 (555)555-5555
-                      <p>
-                        Or chat with us live (HERE IS WHERE WEBSOCKET WILL BE LOCATED) -> <img src="live-chat.png" height="50px" width="50px"></img>
-                      </p>
-                    </a>
+                <button id="submitButton" onClick="createAccount(this.form);">Create Account</button>
+            </div>
+        </form>
+        <div>
+            <button id="submitButton" onClick="navigate('create-account', 'Login')">Back</button>
+        </div>
+    </div>
 
-                  
-                  </body>
+    <div id="adv-ft">
+        <button id="logout-button" class="options" onClick="navigate('adv-ft', 'Login')">Logout</button>
+    </div>
 
-                </div>
-          </div>
-        </footer>
-
-        </html>
+    <footer>
+        <div class="wrapper">
+            <a href="mailto:youremail@example.com?subject=Questions&body=Hi, I have a question about...">Send us an Email</a>
+            <p>Call us at: +1 (555)555-5555</p>
+            <p>Or chat with us live: <img src="live-chat.png" height="50" width="50" alt="Live Chat"></p>
+        </div>
+    </footer>
+</body>
+</html>
