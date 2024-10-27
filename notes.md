@@ -296,7 +296,7 @@ Example:
 document.getElementById("animal").textContent = "crow";
 Which of the following correctly describes JSON?
 
-JSON (JavaScript Object Notation) is a lightweight data-interchange format, often used for APIs.
+JSON (JavaScript Object Notation) is a lightweight data-interchange format, often used for APIs. text-based format for storing and exchanging data that's both human-readable and machine-parsable. It's commonly used in web development, data analysis, and software engineering.
 Console Commands
 What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo do?
 
