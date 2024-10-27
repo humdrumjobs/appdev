@@ -1,6 +1,3 @@
-/* HELLLOOOOO IS HTIS WORKING OR NAHHHH
- */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,10 +5,11 @@
 }
 
 body {
-  background: linear-gradient(135deg, #82bfff 30%, #ffffff 100%); /* Light blue gradient */
+  background-color: #121212; /* Dark background */
+  background: linear-gradient(135deg, #00796b 30%, #1e1e1e 100%); /* Dark teal gradient */
   font-family: 'Arial', sans-serif; /* Clean and modern font */
   line-height: 1.6; /* Improved readability */
-  color: #333; /* Darker text for better contrast */
+  color: #E0E0E0; /* Light text for better contrast */
   padding: 20px; /* Add padding to the body */
 }
 
@@ -36,7 +34,7 @@ nav#nav-bar {
 
 .nav-link {
   text-decoration: none; /* Remove underline */
-  color: white; /* White text */
+  color: #E0E0E0; /* Light text color */
   font-weight: bold; /* Bold text */
   transition: color 0.3s; /* Smooth color transition */
 }
@@ -46,7 +44,7 @@ nav#nav-bar {
 }
 
 h1 {
-  color: #005b5c; /* Darker color for main title */
+  color: #E0E0E0; /* Light color for main title */
   text-align: center;
   font-size: 2.5em; /* Large title */
   margin: 20px 0; /* Spacing around title */
@@ -59,9 +57,9 @@ h1 {
 #Login,
 #pwretrieve,
 #create-account {
-  background: rgba(255, 255, 255, 0.9); /* Light background with transparency */
+  background: rgba(30, 30, 30, 0.9); /* Dark background with transparency */
   border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
   padding: 20px; /* Inner padding */
   max-width: 400px; /* Max width for the form */
   margin: 20px auto; /* Center the form */
@@ -74,8 +72,8 @@ input[type="password"] {
   margin: 10px 0; /* Vertical spacing */
   border-radius: 5px; /* Rounded corners */
   border: 2px solid #00796b; /* Styled border */
-  background-color: #f8f8f8; /* Light input background */
-  color: #333; /* Darker text for readability */
+  background-color: #2a2a2a; /* Dark input background */
+  color: #E0E0E0; /* Light text for inputs */
   font-size: 1em; /* Font size */
 }
 
@@ -86,7 +84,7 @@ input[type="checkbox"] {
 #submitButton,
 button {
   background-color: #00796b; /* Button color */
-  color: white; /* Button text color */
+  color: #E0E0E0; /* Button text color */
   border: none; /* No border */
   border-radius: 5px; /* Rounded corners */
   padding: 15px 20px; /* Inner padding */
@@ -117,16 +115,46 @@ footer {
   margin-top: 30px; /* Margin at the top */
   padding: 20px 0; /* Vertical padding */
   background-color: #00796b; /* Dark teal footer */
-  color: white; /* White text */
+  color: #E0E0E0; /* Light text */
 }
 
 footer a {
-  color: white; /* Footer link color */
+  color: #E0E0E0; /* Footer link color */
   text-decoration: none; /* Remove underline */
 }
 
 footer a:hover {
   text-decoration: underline; /* Underline on hover */
+}
+
+/* Job listings */
+.job-listing {
+  max-width: 800px; /* Limit width of job listings */
+  margin: 20px auto; /* Center horizontally with margin */
+  background-color: #1e1e1e; /* Dark background for listings */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for content */
+}
+
+.job-title {
+  color: #FFCC00; /* Highlight color for job titles */
+}
+
+/* Locations */
+.locations {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items */
+  max-width: 800px; /* Limit width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.location {
+  background-color: #1E1E1E; /* Dark background for locations */
+  margin: 10px 0;
+  padding: 15px; /* Padding for location blocks */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%; /* Full width of parent */
 }
 
 /* Responsive Design */
