@@ -6,7 +6,6 @@
 
 body {
   background-color: #121212; /* Dark background */
-  background: linear-gradient(135deg, #00796b 30%, #1e1e1e 100%); /* Dark teal gradient */
   font-family: 'Arial', sans-serif; /* Clean and modern font */
   line-height: 1.6; /* Improved readability */
   color: #E0E0E0; /* Light text for better contrast */
@@ -50,64 +49,20 @@ h1 {
   margin: 20px 0; /* Spacing around title */
 }
 
-#title-track {
-  margin-bottom: 10px; /* Spacing below title */
+.locations {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items */
+  max-width: 800px; /* Limit width */
+  margin: 0 auto; /* Center horizontally */
 }
 
-#Login,
-#pwretrieve,
-#create-account {
-  background: rgba(30, 30, 30, 0.9); /* Dark background with transparency */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
-  padding: 20px; /* Inner padding */
-  max-width: 400px; /* Max width for the form */
-  margin: 20px auto; /* Center the form */
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 100%; /* Full width */
-  padding: 12px; /* Inner padding */
-  margin: 10px 0; /* Vertical spacing */
-  border-radius: 5px; /* Rounded corners */
-  border: 2px solid #00796b; /* Styled border */
-  background-color: #2a2a2a; /* Dark input background */
-  color: #E0E0E0; /* Light text for inputs */
-  font-size: 1em; /* Font size */
-}
-
-input[type="checkbox"] {
-  margin-right: 10px; /* Spacing to the right of checkbox */
-}
-
-#submitButton,
-button {
-  background-color: #00796b; /* Button color */
-  color: #E0E0E0; /* Button text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 15px 20px; /* Inner padding */
-  width: 100%; /* Full width */
-  margin: 10px 0; /* Vertical spacing */
-  cursor: pointer; /* Pointer cursor */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
-}
-
-#submitButton:hover,
-button:hover {
-  background-color: #004d4f; /* Darker button on hover */
-  transform: translateY(-2px); /* Slight lift effect */
-}
-
-#remember {
-  text-align: left; /* Align left */
-  margin: 10px 0; /* Vertical spacing */
-}
-
-#email-info {
-  text-align: center; /* Center text */
-  margin: 20px 0; /* Vertical spacing */
+.location {
+  background-color: #1e1e1e; /* Dark background for locations */
+  margin: 10px 0;
+  padding: 15px; /* Padding for location blocks */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%; /* Full width of parent */
 }
 
 footer {
@@ -140,43 +95,13 @@ footer a:hover {
   color: #FFCC00; /* Highlight color for job titles */
 }
 
-/* Locations */
-.locations {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items */
-  max-width: 800px; /* Limit width */
-  margin: 0 auto; /* Center horizontally */
-}
-
-.location {
-  background-color: #1E1E1E; /* Dark background for locations */
-  margin: 10px 0;
-  padding: 15px; /* Padding for location blocks */
-  border-radius: 8px; /* Rounded corners */
-  width: 100%; /* Full width of parent */
-}
-
 /* Responsive Design */
 @media (max-width: 600px) {
   h1 {
       font-size: 2em; /* Responsive font size for title */
   }
 
-  #Login,
-  #pwretrieve,
-  #create-account {
-      max-width: 90%; /* Full width on small screens */
-      padding: 15px; /* Reduce padding */
-  }
-
-  input[type="text"],
-  input[type="password"] {
-      font-size: 16px; /* Responsive font size for inputs */
-  }
-
-  #submitButton,
-  button {
-      font-size: 16px; /* Responsive font size for buttons */
+  .location {
+      padding: 10px; /* Reduce padding */
   }
 }
