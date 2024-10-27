@@ -32,6 +32,10 @@
 ### Adjusted the means to commit and deploy files (figured out the technical difficulties)
 ### Required wesbite abilities added
 
+# Review for missed sections
+### added 3rd party service call placeholder
+### added websocket placeholder
+
 
 
 
