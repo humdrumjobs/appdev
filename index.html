@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +23,23 @@
     <h2> HERE IS WHERE 3rd PARTY SERVICE CALL WILL BE LOCATED (LOADS AMOUNT OF JOBS AVAILABLE IN THE US)
       In addition jobs will be able to be posted on the website so that anyone else is able to see them
     </h2>
+
+    <div id="stocks"></div>
+    <h2>Stocks</h2>
+    <script>
+      document.addEventListener('DOMContentLoaded', init, false);
+
+      async function init(){
+        let req = await fetch('https://api.stockdata.org/v1/data/quote?symbols=AAPL,TSLA,MSFT&api_token=FhAhTZTSJL4kNUCR9Ozc3PZAEBDwMJcPXdRgqR9j', {
+          headers: {
+            'Accept' : 'application/json'
+          }
+        });
+        let response = await req.json();
+        console.log('ticker', response);
+        document.querySelector('#stocks').innerHTML = response.stocks;
+      }
+    </script>
 
     <div id="Login">
         <h1 id="title-track"> Humdrum<strong id="title-door">Jobs</strong> </h1>
