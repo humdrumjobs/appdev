@@ -40,6 +40,9 @@
 ### adjusted alignment for sections
 ### adjusted colors for better viewing
 
+# STARTUP REACT
+### implemented most of the simon react features, but translated them to my own website/app
+
 
 
 
