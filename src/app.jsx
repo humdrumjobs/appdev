@@ -62,8 +62,8 @@ function App() {
               )}
               {authState === AuthState.Authenticated && (
                 <li className='nav-item'>
-                  <NavLink className='nav-link' to='githubrepository'>
-                    Github Repository<a onClick={() => navigate('https://github.com/humdrumjobs/appdev/tree/main/public')} ></a>
+                  <NavLink className='nav-link' to='https://github.com/humdrumjobs/appdev/tree/main/public'>
+                    Github Repository
                   </NavLink>
                 </li>
               )}
