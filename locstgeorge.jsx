@@ -13,7 +13,7 @@ export function Locstgeorge() {
 <footer>
     <div class="wrapper">
       <div>
-          <div class="icon">
+          <div className="icon">
             <header>
                 Questions? Contact us at:
             </header>

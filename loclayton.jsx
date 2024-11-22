@@ -10,9 +10,9 @@ export function Loclayton() {
 
 
 <footer>
-    <div class="wrapper">
+    <div className="wrapper">
       <div>
-          <div class="icon">
+          <div className="icon">
             <header>
                 Questions? Contact us at:
             </header>
