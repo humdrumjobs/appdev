@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
-const socket = new WebSocket(`${protocol}://${window.location.host}/wws`);
+const socket = new WebSocket(`${protocol}://${window.location.host}/wss`);
 const messageQueue = []; // Queue for messages sent while WebSocket is connecting
 
 socket.onopen = () => {
