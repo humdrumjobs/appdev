@@ -6,6 +6,7 @@ import { JobOfferings } from './jobofferings/jobofferings';
 import { Locations } from './locations/locations';
 import { MyProfile } from './myprofile/myprofile';
 import { Login } from './login/login';
+import { Chat } from './chat/chat';
 
 
 import { Loclayton } from '../loclayton';
@@ -62,6 +63,13 @@ function App() {
               )}
               {authState === AuthState.Authenticated && (
                 <li className='nav-item'>
+                  <NavLink className='nav-link' to='chat'>
+                    "Chat, is this real?"
+                  </NavLink>
+                </li>
+              )}
+              {authState === AuthState.Authenticated && (
+                <li className='nav-item'>
                   <NavLink className='nav-link' to='https://github.com/humdrumjobs/appdev/tree/main/public'>
                     Github Repository
                   </NavLink>
@@ -96,6 +104,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/jobofferings' element={<JobOfferings />} />
           <Route path='/locations' element={<Locations />} />
+          <Route path='/chat' element={<Chat />} />
 
           
           <Route path='/loclayton' element={<Loclayton/>} />

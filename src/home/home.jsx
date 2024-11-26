@@ -4,7 +4,7 @@ import './home.css';
 export function Home() {
   return (
     <main className='bg-secondary'>
-        Hello my whigga
+        Hello my friend
     </main>
   );
 }
