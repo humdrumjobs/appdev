@@ -4,7 +4,6 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 export function PostJob(){
 
-
     const {id} = useParams();
     const [values, setValues] = useState({
         id: id,
