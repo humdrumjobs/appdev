@@ -18,3 +18,18 @@ body {
   .name {
     padding: 1em 0;
   }
+  #chat-text {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+  
+  #chat-text div {
+    margin-bottom: 5px;
+  }
+  
+  #chat-text strong {
+    color: #2a9d8f;
+  }

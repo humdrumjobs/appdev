@@ -1,19 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './chat.css';
 import './chatClient.jsx';
 
 export function Chat() {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]); // State to track all messages
+
+  useEffect(() => {
+    if (window.chatClient && window.chatClient.onMessage) {
+      window.chatClient.onMessage((newMessage) => {
+        setMessages((prevMessages) => [...prevMessages, newMessage]); // Append new message to the list
+      });
+    }
+  }, []);
 
   const sendMessage = () => {
     if (!name || !message) return;
-  
+
     const messageData = {
       name,
       msg: message,
     };
-  
+
     if (window.chatClient && window.chatClient.send) {
       try {
         window.chatClient.send(JSON.stringify(messageData));
@@ -57,7 +66,14 @@ export function Chat() {
           Send
         </button>
       </fieldset>
-      <div id="chat-text"></div>
+
+      <div id="chat-text">
+        {messages.map((msg, index) => (
+          <div key={index}>
+            <strong>{msg.name}:</strong> {msg.msg}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

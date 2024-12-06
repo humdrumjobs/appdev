@@ -7,6 +7,7 @@ import { Locations } from './locations/locations';
 import { MyProfile } from './myprofile/myprofile';
 import { Login } from './login/login';
 import { Chat } from './chat/chat';
+import { PostJob } from './postjob/postjob';
 
 
 import { Loclayton } from '../loclayton';
@@ -47,6 +48,7 @@ function App() {
                   </NavLink>
                 </li>
               )}
+              
               {authState === AuthState.Authenticated && (
                 <li className='nav-item'>
                   <NavLink className='nav-link' to='jobofferings'>
@@ -63,8 +65,15 @@ function App() {
               )}
               {authState === AuthState.Authenticated && (
                 <li className='nav-item'>
+                  <NavLink className='nav-link' to='postjob'>
+                    Post Job
+                  </NavLink>
+                </li>
+              )}
+              {authState === AuthState.Authenticated && (
+                <li className='nav-item'>
                   <NavLink className='nav-link' to='chat'>
-                    "Chat, is this real?"
+                    "Customer Support"
                   </NavLink>
                 </li>
               )}
@@ -105,6 +114,8 @@ function App() {
           <Route path='/jobofferings' element={<JobOfferings />} />
           <Route path='/locations' element={<Locations />} />
           <Route path='/chat' element={<Chat />} />
+          <Route path='/postjob' element={<PostJob />} />
+          
 
           
           <Route path='/loclayton' element={<Loclayton/>} />
