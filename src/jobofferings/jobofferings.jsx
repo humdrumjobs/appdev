@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { PostJobs } from './jobofferings';
+
 import './jobofferings.css';
 
 export function JobOfferings() {
   return (
-    <div>
+
+    class PostJobs extends Component{
+        render () {
+            return (
+                <div>
 
         <h1>Job Offerings</h1>
 
@@ -39,6 +45,9 @@ export function JobOfferings() {
                 <p>Questions? Contact us at: +1 (555)555-5555</p>
             </div>
         </footer>
-</div>
+        </div>
+            )
+        }
+    }
   );
 }

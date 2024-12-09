@@ -8,7 +8,9 @@ import { MyProfile } from './myprofile/myprofile';
 import { Login } from './login/login';
 import { Chat } from './chat/chat';
 import { PostJob } from './postjob/postjob';
+import { Create } from './pages/create';
 
+ 
 
 import { Loclayton } from '../loclayton';
 import { Locogden } from '../locogden';
@@ -21,6 +23,14 @@ import { AuthState } from './login/authState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: 'fefefe'
+//     }
+//   }
+
+// })
 
 function App() {
   const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
@@ -72,6 +82,13 @@ function App() {
               )}
               {authState === AuthState.Authenticated && (
                 <li className='nav-item'>
+                  <NavLink className='nav-link' to='create'>
+                    Create
+                  </NavLink>
+                </li>
+              )}
+              {authState === AuthState.Authenticated && (
+                <li className='nav-item'>
                   <NavLink className='nav-link' to='chat'>
                     "Customer Support"
                   </NavLink>
@@ -115,6 +132,7 @@ function App() {
           <Route path='/locations' element={<Locations />} />
           <Route path='/chat' element={<Chat />} />
           <Route path='/postjob' element={<PostJob />} />
+          <Route path='/create' element={<Create />} />
           
 
           

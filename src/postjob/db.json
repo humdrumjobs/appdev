@@ -1,0 +1,28 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "jobtype": "yardwork",
+            "location" : "California",
+            "email" : "josh@gmail.com",
+            "payment" : "$50",
+            "notes" : "it will be some weeding and raking leaves"
+        },
+        {
+            "id": 1,
+            "jobtype": "dishes",
+            "location" : "Utah",
+            "email" : "joblin@gmail.com",
+            "payment" : "$30",
+            "notes" : "got a ton of dishes to do after our party"
+        },
+        {
+            "id": 1,
+            "jobtype": "yardwork",
+            "location" : "Provo, Utah",
+            "email" : "johndoe@gmail.com",
+            "payment" : "$25",
+            "notes" : "need my back lawn mowed asap"
+        }
+    ]
+}

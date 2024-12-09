@@ -10,12 +10,14 @@ export function PostJob(){
         jobtype: '',
         location: '',
         email: '',
-        payment: ''
+        payment: '',
+        notes: ''
     })
     useEffect(()=> {
         axios.get('https://startup.humdrumjobs.com/postjob/' + id)
         .then(res => {
-            setValues({...values, jobtype: res.data.jobtype, location: res.data.location, email: res.data.email, payment: res.data.payment})
+            setValues({...values, jobtype: res.data.jobtype, location: res.data.location, 
+                email: res.data.email, payment: res.data.payment, notes: res.data.notes})
         })
         .catch(err => console.log(err))
     }, [])
@@ -23,7 +25,7 @@ export function PostJob(){
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put('https://startup.humdrumjobs.com/postjob/' + id, values)
+        axios.put('https://startup.humdrumjobs.com/jobofferings/' + id, values)
         .then(res => {
             navigate('/');
         })
@@ -54,13 +56,17 @@ export function PostJob(){
                         <label htmlFor='location'>Payment: </label>
                         <input type='text' name='payment' className='form-control' placeholder='Enter payment' 
                         value={values.payment} onChange={e => setValues({...values, payment: e.target.value})}></input>
+                    </div>
+                    <div>
+                        <label htmlFor='location'>Special notes: </label>
+                        <input type='text' name='notes' className='form-control' placeholder='Add any extra notes' 
+                        value={values.notes} onChange={e => setValues({...values, notes: e.target.value})}></input>
                     </div><br/>
                     <button className='btn btn-info'>Update</button>
                 </form>
             </div>
         </div>
     )
-
 }
 
 export default PostJob
