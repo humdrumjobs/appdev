@@ -9,6 +9,7 @@ import { Login } from './login/login';
 import { Chat } from './chat/chat';
 import { PostJob } from './postjob/postjob';
 import { Create } from './pages/create';
+import { Notes } from './pages/notes';
 
  
 
@@ -133,6 +134,8 @@ function App() {
           <Route path='/chat' element={<Chat />} />
           <Route path='/postjob' element={<PostJob />} />
           <Route path='/create' element={<Create />} />
+          <Route path='/notes' element={<Notes />} />
+
           
 
           

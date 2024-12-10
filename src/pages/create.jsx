@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core'
 // import TextField from '@material-ui/core/TextField'
+// import Radio from '@material-ui/core/Radio'
+import { useHistory, useNavigate } from 'react-router-dom'
 
 const useStyles = makeStyles({
     field: {
@@ -16,17 +18,45 @@ const useStyles = makeStyles({
 export function Create() {
 
     const classes = useStyles()
+    const history = useNavigate()
     const [jobtype, setJobType] = useState('')
     const [location, setLocation] = useState('')
     const [email, setEmail] = useState('')
     const [payment, setPayment] = useState('')
     const [notes, setNotes] = useState('')
 
+    const [jobtypeError, setJobtypeError] = useState(false)
+    const [locationError, setLocationError] = useState(false)
+    const [emailError, setEmailError] = useState(false)
+    const [paymentError, setPaymentError] = useState(false)
+    const [notesError, setNotesError] = useState(false)
+
     const handleSubmit = (e) => {
         e.preventDefault()
 
+        if(jobtype == '') {
+            setJobtypeError(true)
+        }
+        if(location == '') {
+            setLocationError(true)
+        }
+        if(email == '') {
+            setEmailError(true)
+        }
+        if(payment == '') {
+            setPaymentError(true)
+        }
+        if(notes == '') {
+            setNotesError(true)
+        }
+
         if (jobtype && location && email && payment && notes) {
-            console.log(jobtype, location, email, payment, notes)
+            fetch('https://startup.humdrumjobs/notes', {
+                method: 'POST',
+                headers: {"Content-type": "application/json"},
+                body: JSON.stringify({ jobtype, location, email, payment, notes })
+            }).then(() => history('/jobofferings'))
+            // console.log(jobtype, location, email, payment, notes)
         }
     }
 
@@ -48,7 +78,8 @@ export function Create() {
                 variant='outlined'
                 color='secondary'
                 fullWidth
-                required/>
+                required
+                error={jobtypeError}/>
 
                 <textarea
                 onChange={(e) => setLocation(e.target.value)}
@@ -57,7 +88,8 @@ export function Create() {
                 variant='outlined'
                 color='secondary'
                 fullWidth
-                required/>
+                required
+                error={locationError}/>
 
                 <textarea
                 onChange={(e) => setEmail(e.target.value)}
@@ -66,7 +98,8 @@ export function Create() {
                 variant='outlined'
                 color='secondary'
                 fullWidth
-                required/>
+                required
+                error={emailError}/>
 
                 <textarea
                 onChange={(e) => setPayment(e.target.value)}
@@ -75,7 +108,8 @@ export function Create() {
                 variant='outlined'
                 color='secondary'
                 fullWidth
-                required/>
+                required
+                error={paymentError}/>
 
                 <textarea
                 onChange={(e) => setNotes(e.target.value)}
@@ -85,7 +119,8 @@ export function Create() {
                 color='secondary'
                 fullWidth
                 rows={5}
-                required/>
+                required
+                error={notesError}/>
 
             
             <button 

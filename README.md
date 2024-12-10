@@ -39,6 +39,7 @@
 # CSS STARTUP
 ### adjusted alignment for sections
 ### adjusted colors for better viewing
+### (implemented similar css to simon)
 
 # STARTUP REACT
 ### implemented most of the simon react features, but translated them to my own website/app

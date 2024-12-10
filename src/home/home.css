@@ -2,10 +2,11 @@
     height: calc(100px + 1em);
     margin-bottom: 1em;
     padding: 0.5em;
-    background: rgb(86, 89, 93);
+    background: white;
     border-radius: 5px;
   }
-  
+  /* YOU WERE IN THE MIDDLE OF ADDING THE ERROR CATCHING FOR THE CREATE PAGE AND THEN NEEDED TO RECORD
+  THE ENTERED DAT INTO A JSON FILE NEXT */
   .quote-box {
     margin-top: 1em;
     padding: 0.5em;
