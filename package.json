@@ -21,5 +21,18 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3"
-  }
+  },
+  "description": "![app preview](https://github.com/user-attachments/assets/f135dc7e-ec72-4f27-bbe9-88af2bd4bd07)\r # Mobile Preview\r ![app preview 2](https://github.com/user-attachments/assets/b5e9d676-5bd5-4816-a6f4-d2e29c809c7c)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humdrumjobs/appdev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humdrumjobs/appdev/issues"
+  },
+  "homepage": "https://github.com/humdrumjobs/appdev#readme"
 }

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Typography from '@material-ui/core/Typography'
-// import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core'
-// import TextField from '@material-ui/core/TextField'
+import Textfield from '@material-ui/core/TextField'
 // import Radio from '@material-ui/core/Radio'
-import { useHistory, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const useStyles = makeStyles({
     field: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 export function Create() {
 
     const classes = useStyles()
-    const history = useNavigate()
+    const navigate = useNavigate()
     const [jobtype, setJobType] = useState('')
     const [location, setLocation] = useState('')
     const [email, setEmail] = useState('')
@@ -34,32 +34,35 @@ export function Create() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if(jobtype == '') {
-            setJobtypeError(true)
-        }
-        if(location == '') {
-            setLocationError(true)
-        }
-        if(email == '') {
-            setEmailError(true)
-        }
-        if(payment == '') {
-            setPaymentError(true)
-        }
-        if(notes == '') {
-            setNotesError(true)
-        }
+        setJobtypeError(false);
+        setLocationError(false);
+        setEmailError(false);
+        setPaymentError(false);
+        setNotesError(false);
 
-        if (jobtype && location && email && payment && notes) {
-            fetch('https://startup.humdrumjobs/notes', {
-                method: 'POST',
-                headers: {"Content-type": "application/json"},
-                body: JSON.stringify({ jobtype, location, email, payment, notes })
-            }).then(() => history('/jobofferings'))
+        if (!jobtype) setJobtypeError(true);
+        if (!location) setLocationError(true);
+        if (!email) setEmailError(true);
+        if (!payment) setPaymentError(true);
+        if (!notes) setNotesError(true);
+
+        fetch('https://startup.humdrumjobs.com/notes', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ jobtype, location, email, payment, notes })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(() => navigate('/jobofferings'))
+            .catch(error => {
+                console.error('Error submitting form:', error);
+            });
             // console.log(jobtype, location, email, payment, notes)
         }
-    }
-
 
     return (
         <Container>
@@ -71,7 +74,7 @@ export function Create() {
             </Typography>
 
             <form noValidate autoComplete='off' onSubmit={handleSubmit}>
-                <textarea
+                <Textfield
                 onChange={(e) => setJobType(e.target.value)}
                 className={classes.field}
                 label='Job Type' 
@@ -81,55 +84,56 @@ export function Create() {
                 required
                 error={jobtypeError}/>
 
-                <textarea
+                <Textfield
                 onChange={(e) => setLocation(e.target.value)}
                 className={classes.field}
-                label='Details' 
+                label='Location' 
                 variant='outlined'
                 color='secondary'
                 fullWidth
                 required
                 error={locationError}/>
 
-                <textarea
+                <Textfield
                 onChange={(e) => setEmail(e.target.value)}
                 className={classes.field}
-                label='Details' 
+                label='Email' 
                 variant='outlined'
                 color='secondary'
                 fullWidth
                 required
                 error={emailError}/>
 
-                <textarea
+                <Textfield
                 onChange={(e) => setPayment(e.target.value)}
                 className={classes.field}
-                label='Details' 
+                label='Payment' 
                 variant='outlined'
                 color='secondary'
                 fullWidth
                 required
                 error={paymentError}/>
 
-                <textarea
+                <Textfield 
                 onChange={(e) => setNotes(e.target.value)}
                 className={classes.field}
-                label='Details' 
+                label='Notes' 
                 variant='outlined'
                 color='secondary'
                 fullWidth
-                rows={5}
+                multiline
+                minRows={5}
                 required
                 error={notesError}/>
 
             
-            <button 
+            <Button 
             type='submit' 
             color='secondary' 
             variant='contained'> 
             {/* startIcon={}
             endIcon={}> */}
-            Submit</button>
+            Submit</Button>
             </form>
 
             
