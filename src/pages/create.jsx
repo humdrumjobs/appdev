@@ -46,6 +46,20 @@ export function Create() {
         if (!payment) setPaymentError(true);
         if (!notes) setNotesError(true);
 
+        async function savePost(jobtype, location, email, payment, notes){
+            const date = new Date().toLocaleDateString();
+            const newPost = { name: userName, date: date, jobtype: jobtype, location: location, email: email, payment: payment, notes: notes}
+            
+            await fetch('/create', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json'},
+                body: JSON.stringify(newPost),
+            });
+
+            GameNotifier.broadcastEvent(userName, GameEvent.End, `${userName} created a new post!`);
+        }
+  
+
         fetch('https://startup.humdrumjobs.com/notes', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },

@@ -1,23 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Typography, Card, CardContent } from '@material-ui/core';
 
-
 export function JobOfferings() {
     const [jobOffers, setJobOffers] = useState([]);
     const [error, setError] = useState(null);
-
-    useEffect(() => {
-        // Fetch data from the API
-        fetch('https://startup.humdrumjobs.com/notes')
+    React.useEffect(() => {
+        fetch('/create')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch job offerings');
                 }
                 return response.json();
             })
+            .then((posts) => {
+                savePost(posts);
+            })
             .then((data) => setJobOffers(data))
             .catch((error) => setError(error.message));
     }, []);
+
+// export function JobOfferings() {
+//     const [jobOffers, setJobOffers] = useState([]);
+//     const [error, setError] = useState(null);
+
+//     useEffect(() => {
+//         // Fetch data from the API
+//         fetch('https://startup.humdrumjobs.com/notes')
+//             .then((response) => {
+//                 if (!response.ok) {
+//                     throw new Error('Failed to fetch job offerings');
+//                 }
+//                 return response.json();
+//             })
+//             .then((data) => setJobOffers(data))
+//             .catch((error) => setError(error.message));
+//     }, []);
 
     return (
         <Container>
